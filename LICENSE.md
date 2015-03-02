@@ -26,6 +26,9 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+* Three files (`segy_mod.h, su_xdr_mod.h, xdrhdrsub.c`) are from the Seismic Un\*x 
+  of Colorado School of Mines. Please find the license of these files in the source code.
+
 Reference:
 Wansoo Ha, 2015, Development of a Fortran library for input/output of SU files,
     Journal of the Korean Society of Mineral and Energy Resources Engineers, 52(1), ???-???.
