@@ -9,4 +9,8 @@ SUIO 라이브러리를 이용하여 프로그램을 작성한 후 컴파일할 
 
 	$ gfortran -o myprogram mycode.f90 -I/path/to/SUIO/include -L/path/to/SUIO/lib -lsuio
 
-와 같이 실행하시면 됩니다.
+와 같이 실행하시면 됩니다. 설치한 라이브러리를 지울 때에는
+
+	$ make uninstall
+
+을 실행합니다.
