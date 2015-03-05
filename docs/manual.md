@@ -349,53 +349,53 @@ call su_close(sd, so)
 ## 정리
 정리하면, 읽거나 쓰기 위해 SU 파일을 열 때에는
 
-- sf = su_input('input.su',ns=ns,ntr=ntr)
-- so = su_output(xdr=.true.)
-- sf = SuFile('r')
+- `sf = su_input('input.su',ns=ns,ntr=ntr)`
+- `so = su_output(xdr=.true.)`
+- `sf = SuFile('r')`
 
 SU 파일을 닫을 때에는 
 
-- call su_close(sf,so)
+- `call su_close(sf,so)`
 
 트레이스 또는 트레이스 헤더를 읽을 때에는
 
-- call sf%read(trc)
-- sf%fread(trc)
-- trc = sf%trace(itr)
+- `call sf%read(trc)`
+- `sf%fread(trc)`
+- `trc = sf%trace(itr)`
 
-- call sf%read(head,itr)
-- sf%fread(head,itr)
-- head = sf%header(itr)
+- `call sf%read(head,itr)`
+- `sf%fread(head,itr)`
+- `head = sf%header(itr)`
 
 트레이스를 쓸 때에는
 
-- call sf%write(trc)
+- `call sf%write(trc)`
 
 트레이스에서 keyword를 읽고 쓸 때에는
 
-- int_value = trc%key('fldr')
-- real_value = trc%key_real('f1')
-- fldr = trc%fldr() !! 등등 모든 SU Keywords
-- call trc%get('fldr',fldr)
-- call trc%get(fldr=fldr, tracf=tracf)
+- `int_value = trc%key('fldr')`
+- `real_value = trc%key_real('f1')`
+- `fldr = trc%fldr() !! 등등 모든 SU Keywords`
+- `call trc%get('fldr',fldr)`
+- `call trc%get(fldr=fldr, tracf=tracf)`
 
-- call trc%set('fldr',fldr)
-- call trc%set(fldr=fldr, tracf=tracf)
+- `call trc%set('fldr',fldr)`
+- `call trc%set(fldr=fldr, tracf=tracf)`
 
 트레이스에서 헤더나 데이터를 읽고 쓸 때에는
 
-- arr = trc%data()
-- call trc%get(arr)
-- call trc%get(data=arr)
+- `arr = trc%data()`
+- `call trc%get(arr)`
+- `call trc%get(data=arr)`
 
-- head = trc%header()
-- call trc%set(head)
-- call trc%set(header=head)
+- `head = trc%header()`
+- `call trc%set(head)`
+- `call trc%set(header=head)`
 
 트레이스나 헤더를 초기화할 때에는
 
-- trc = SuTrace(header=head,fldr=fldr,ns=ns,dt=dt)
-- head = SuHeader(fldr=fldr,ns=ns,dt=dt)
+- `trc = SuTrace(header=head,fldr=fldr,ns=ns,dt=dt)`
+- `head = SuHeader(fldr=fldr,ns=ns,dt=dt)`
 
 ## 참고문헌
 라이브러리의 사용법은 위의 매뉴얼을 참고하시면 되고, 라이브러리의 구조나 SU 파일의 구조에 대해서는 아래 논문을 참고하세요.
