@@ -1,7 +1,6 @@
 # 설치
 
-우선 [Github](https://github.com/pkgpl/SUIO)에서 라이브러리를 받습니다.
-`/path/to/SUIO/src` 디렉토리에서 `Makefile`의 필요한 옵션을 바꾼 후에 다음을 실행합니다.
+우선 [Github](https://github.com/pkgpl/SUIO)에서 [라이브러리](https://github.com/pkgpl/SUIO/archive/master.zip)를 받습니다. 압축을 푼 후 `/path/to/SUIO/src` 디렉토리에서 `Makefile`의 필요한 옵션을 바꾼 후에 다음을 실행합니다.
 
 	$ make install
 
