@@ -38,6 +38,7 @@ end function
 - `ntr`은 SU 파일의 트레이스 개수입니다. 파일 크기로부터 트레이스 개수를 알아내는데, 표준입출력을 사용할 경우에는 사용할 수 없습니다.
 
 #### 예제
+
 ```
 type(SuFile):: sf
 integer:: ns,ntr
@@ -75,6 +76,7 @@ end function
 변수들은 앞의 경우와 같습니다.
 
 #### 예제
+
 ```
 type(SuFile):: so
 !! file
@@ -151,6 +153,7 @@ end function
 ```
 
 #### 예제
+
 ```
 type(SuTrace):: trc
 
@@ -166,8 +169,6 @@ do while( sf%fread(trc) )
 	!! work
 enddo
 ```
-
-
 
 ## SU trace header만 읽기
 
