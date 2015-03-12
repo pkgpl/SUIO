@@ -31,5 +31,5 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Reference:
 Wansoo Ha, 2015, Development of a Fortran library for input/output of SU files,
-    Journal of the Korean Society of Mineral and Energy Resources Engineers, 52(1), ???-???.
+    Journal of the Korean Society of Mineral and Energy Resources Engineers, 52(1), 81-90.
 
