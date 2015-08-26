@@ -43,16 +43,16 @@ end function
 type(SuFile):: sf
 integer:: ns,ntr
 !! file
-sf = su_open('input.su')
-sf = su_open('input.su', xdr=.true.)
-sf = su_open('input.su', xdr=.false., ns=ns, ntr=ntr)
-sf = su_open('intput.su', ntr=ntr)
+sf = su_input('input.su')
+sf = su_input('input.su', xdr=.true.)
+sf = su_input('input.su', xdr=.false., ns=ns, ntr=ntr)
+sf = su_input('intput.su', ntr=ntr)
 !! 물론, 위의 경우들 중 하나를 선택해서 사용해야겠죠.
 
 !! standard input
-sf = su_open()
-sf = su_open(xdr=.true.)
-sf = su_open(ns=ns)
+sf = su_input()
+sf = su_input(xdr=.true.)
+sf = su_input(ns=ns)
 ```
 
 
