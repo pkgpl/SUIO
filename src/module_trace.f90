@@ -22,13 +22,13 @@ module suio_trace
             procedure:: set_int
             procedure:: set_real
             procedure:: set_key
-            generic,public :: set => set_int, set_real, set_key
+            generic,public :: set => set_int, set_real
             procedure,public:: set_cheader
             !! get subroutines
             procedure:: get_int
             procedure:: get_real
             procedure:: get_key
-            generic,public :: get => get_int, get_real, get_key
+            generic,public :: get => get_int, get_real
             procedure,public:: get_cheader
             !! get functions
             procedure,public:: key => key_int
@@ -129,13 +129,13 @@ module suio_trace
             procedure:: set_data
             procedure:: set_ctrace
             procedure:: set_all
-            generic,public :: set => set_header, set_data, set_ctrace, set_all
+            generic,public :: set => set_data, set_ctrace, set_all
             !! get subroutines
             procedure:: sget_header
             procedure:: sget_data
             procedure:: sget_ctrace
             procedure:: get_all
-            generic,public :: get => sget_header, sget_data, sget_ctrace, get_all
+            generic,public :: get => sget_data, sget_ctrace, get_all
             !! get functions
             procedure,public:: header => get_header
             procedure,public:: data => get_data
@@ -450,7 +450,7 @@ contains
                                          ,gain   ,igc    ,igi    ,corr   ,sfs    ,sfe    ,slen   ,styp   ,stas   ,stae   &
                                          ,tatyp  ,afilf  ,afils  ,nofilf ,nofils ,lcf    ,hcf    ,lcs    ,hcs    ,year   &
                                          ,day    ,hour   ,minute ,sec    ,timbas ,trwf   ,grnors ,grnofr ,grnlof ,gaps   &
-                                         ,otrav  ,ntr    ,mark   ,d1     ,f1     ,d2     ,f2     ,ungpow ,unscale,header,data) result(su)
+                  ,otrav  ,ntr    ,mark   ,d1     ,f1     ,d2     ,f2     ,ungpow ,unscale,header,data) result(su)
 
     integer,intent(in),optional::         tracl  ,tracr  ,fldr   ,tracf  ,ep     ,cdp    ,cdpt   ,trid   ,nvs    ,nhs    &
                                          ,duse   ,offset ,gelev  ,selev  ,sdepth ,gdel   ,sdel   ,swdep  ,gwdep  ,scalel &
@@ -464,7 +464,7 @@ contains
     type(SuHeader),intent(in),optional:: header
     real,intent(in),optional:: data(:)
     call su_trace_init(su%trc)
-    if(present(header )) call su%set(header)
+    if(present(header )) call su%set_header(header)
 
     if(present(tracl  )) su%trc%th%tracl  =tracl  
     if(present(tracr  )) su%trc%th%tracr  =tracr  
@@ -888,7 +888,7 @@ contains
     type(SuHeader),intent(in),optional:: header
     real,intent(in),optional:: data(:)
 
-    if(present(header )) call su%set(header) !! set header first so that the following keywords can modify header keys
+    if(present(header )) call su%set_header(header) !! set header first so that the following keywords can modify header keys
 
     if(present(tracl  )) su%trc%th%tracl  =tracl  
     if(present(tracr  )) su%trc%th%tracr  =tracr  
