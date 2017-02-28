@@ -4,6 +4,9 @@ FC = ifort
 CFLAGS = -O2
 FFLAGS = -O2 -assume byterecl -warn all
 
+INC=../include
+LIB=../lib
+
 TARGET = libsuio.a
 OBJECTS = func_suio.o xdrhdrsub.o module_types.o module_binding.o module_trace.o module_xdr_default.o module_file.o module_suio.o
 
@@ -25,9 +28,9 @@ clean:
 	rm $(TARGET) $(OBJECTS) *.mod
 
 install: $(TARGET)
-	mkdir ../include ../lib
-	cp *.mod ../include
-	cp $(TARGET) ../lib
+	mkdir -p $(INC) $(LIB)
+	cp *.mod $(INC)
+	cp $(TARGET) $(LIB)
 
 uninstall: clean
-	rm -r ../include ../lib
+	rm -r $(INC) $(LIB)
