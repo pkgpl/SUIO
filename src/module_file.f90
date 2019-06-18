@@ -28,7 +28,7 @@ module suio_file
             procedure:: move_to
             procedure,public:: close
             ! write subroutine
-            procedure:: write => write_trace
+            procedure,public:: write => write_trace
             ! read subroutines
             procedure:: sread_header
             procedure:: sread_trace
