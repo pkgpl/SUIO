@@ -863,7 +863,8 @@ contains
     if(present(ungpow )) ungpow =su%trc%th%ungpow 
     if(present(unscale)) unscale=su%trc%th%unscale
 
-    if(present(data   )) data   =su%data()
+    !if(present(data   )) data   =su%data()
+    if(present(data   )) call su_get_data(su%trc,data)
     end subroutine
 
     subroutine set_all(su                ,tracl  ,tracr  ,fldr   ,tracf  ,ep     ,cdp    ,cdpt   ,trid   ,nvs    ,nhs    &
